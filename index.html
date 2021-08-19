@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
+
+  <script src="scripts/script.js"></script>
 </head>
 <body>
   <header>
@@ -20,7 +22,7 @@
 
   <main>
     <div class="bill-container">
-      <label for="bill" class="section-label">Bill</label>
+      <label for="bill" class="section-label">Bill<span class="bill-error"></span></label>
       <label class="dollar-svg">
         <input type="text" name="bill" id="bill" placeholder="0">
       </label>
@@ -31,24 +33,24 @@
     <form class="tip-container">
       <label for="tip-percentage" class="section-label">Select Tip %</label>
       <div class="tip-selection">
-        <label for="5%">
-          <input type="radio" name="tip-percentage" id="5%">
+        <label for="--5">
+          <input type="radio" name="tip-percentage" id="--5">
           <span class="solid-button tip-value">5%</span>
         </label>
-        <label for="10%">
-          <input type="radio" name="tip-percentage" id="10%" class="solid-button">
+        <label for="--10">
+          <input type="radio" name="tip-percentage" id="--10">
           <span class="solid-button tip-value">10%</span>
         </label>
-        <label for="15%">
-          <input type="radio" name="tip-percentage" id="15%" class="solid-button">
+        <label for="--15">
+          <input type="radio" name="tip-percentage" id="--15">
           <span class="solid-button tip-value">15%</span>
         </label>
-        <label for="25%">
-          <input type="radio" name="tip-percentage" id="25%" class="solid-button">
+        <label for="--25">
+          <input type="radio" name="tip-percentage" id="--25">
           <span class="solid-button tip-value">25%</span>
         </label>
-        <label for="50%">
-          <input type="radio" name="tip-percentage" id="50%" class="solid-button">
+        <label for="--50">
+          <input type="radio" name="tip-percentage" id="--50">
           <span class="solid-button tip-value">50%</span>
         </label>
         <label for="custom">
@@ -59,7 +61,7 @@
     </form>
 
     <div class="people-container">
-      <label for="people" class="section-label">Number of People</label>
+      <label for="people" class="section-label">Number of People <span class="person-error"></span></label>
       <label class="person-svg">
         <input type="text" name="people" id="people" placeholder="0">
       </label>
@@ -71,7 +73,7 @@
           <span class="total-header">Tip Amount</span>
           <span class="total-text">/ person</span> 
         </div>
-        <span class="total">$0.00</span>
+        <span class="total" id="tip-final">$0.00</span>
       </div>
 
       <div class="price-container" id="total-amount">
@@ -79,10 +81,10 @@
           <span class="total-header">Total</span>
           <span class="total-text">/ person</span> 
         </div>
-        <span class="total">$0.00</span>
+        <span class="total" id="total-final">$0.00</span>
       </div>
 
-      <button class="solid-button reset-button">Reset</button>
+      <button class="solid-button reset-button reset-empty">Reset</button>
     </div>
   </main>
   

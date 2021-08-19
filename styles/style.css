@@ -17,6 +17,9 @@
   --teal: rgb(38, 194, 173);
   --button-hover: rgb(159, 232, 223);
   --white: hsl(0, 0%, 100%);
+  --error-color: rgb(184, 126, 112);
+  --empty-reset-background: rgb(13, 104, 109);
+  --empty-reset-text: rgb(5, 92, 99);
 }
 
 body {
@@ -66,9 +69,15 @@ input {
   padding: 0.5rem;
   width: calc(100% - 1rem);
   border: none;
+  border-radius: 0.25rem;
   background-color: var(--light-grayish-cyan-2);
   text-align: right;
   color: var(--very-dark-cyan);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--teal);
 }
 
 .logo-container {
@@ -88,6 +97,20 @@ input {
   border-radius: 0.5rem;
   padding: 1rem;
   border: none;
+}
+
+.input-error {
+  box-shadow: 0 0 0 0.2rem var(--error-color);
+}
+
+.bill-error {
+  float: right;
+  color: var(--error-color);
+}
+
+.person-error {
+  float: right;
+  color: var(--error-color);
 }
 
 /* Bill */
@@ -241,6 +264,11 @@ input[type="radio"]:checked+span {
   cursor: pointer;
   background-color: var(--button-hover);
   color: var(--very-dark-cyan);
+}
+
+.reset-empty {
+  background-color: var(--empty-reset-background);
+  color: var(--empty-reset-text);
 }
 
 @media screen and (min-device-width: 760px) {
