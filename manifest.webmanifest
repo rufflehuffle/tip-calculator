@@ -1,0 +1,14 @@
+{
+    "background_color": "white",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "./images/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "name": "Tip Calculator",
+    "short_name": "Tip Calc",
+    "start_url": "/tip-calculator/"
+}
